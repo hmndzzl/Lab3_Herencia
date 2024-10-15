@@ -1,15 +1,15 @@
 public class Vehiculo{
-    private int placa;
-    private String marca;
-    private String modelo;
-    private int anio;
-    private String color;
-    private double capacidadMotor;
-    private double capacidadTanque;
-    private double velocidadMax;
-    private String tipoTransmision;
-    private double precio;
-    private String estado;
+    protected  int placa;
+    protected  String marca;
+    protected  String modelo;
+    protected  int anio;
+    protected  String color;
+    protected  double capacidadMotor;
+    protected  double capacidadTanque;
+    protected  double velocidadMax;
+    protected  String tipoTransmision;
+    protected double precio;
+    protected  String estado;
 
     // Constructor
     public Vehiculo (int placa, String marca, String modelo, int anio, String color, double capacidadMotor, double capacidadTanque, double velocidadMax, String tipoTransmision, double precio, String estado){
