@@ -37,4 +37,13 @@ public class Auto extends Vehiculo {
 	public void setCapacidadMaletero(double capacidadMaletero) {
 		this.capacidadMaletero = capacidadMaletero;
 	}
+
+	//Métodos
+
+	public String info() {
+        return super.info() + 
+               ", Número de puertas: " + noPuertas + 
+               ", Tamaño de ruedas: " + tamanioRuedas + " pulgadas" + 
+               ", Capacidad del maletero: " + capacidadMaletero + " L";
+    }
 }

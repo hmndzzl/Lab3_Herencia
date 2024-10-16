@@ -26,4 +26,11 @@ public class Moto extends Vehiculo {
 	public void setTamanioRuedas(double tamanioRuedas) {
 		this.tamanioRuedas = tamanioRuedas;
 	}
+
+    //Métodos
+
+    public String info() {
+        return super.info() + 
+               ", Tipo de moto: " + tipo + ", Tamaño de ruedas: " + tamanioRuedas + " pulgadas";
+    }
 }

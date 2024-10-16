@@ -114,4 +114,20 @@ public abstract class Vehiculo{
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+
+	//Métodos 
+
+	public String info() {
+        return "Placa: " + placa + 
+               ", Marca: " + marca + 
+               ", Modelo: " + modelo + 
+               ", Año: " + anio + 
+               ", Color: " + color + 
+               ", Capacidad del Motor: " + capacidadMotor + " L" +
+               ", Capacidad del Tanque: " + capacidadTanque + " Gal" +
+               ", Velocidad Máxima: " + velocidadMax + " km/h" +
+               ", Transmisión: " + tipoTransmision + 
+               ", Precio: $" + precio + 
+               ", Estado: " + estado;
+    }
 }

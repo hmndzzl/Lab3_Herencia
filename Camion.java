@@ -36,4 +36,11 @@ public class Camion extends Vehiculo{
 	public void setTamanioRuedas(double tamanioRuedas) {
 		this.tamanioRuedas = tamanioRuedas;
 	}
+
+    //Métodos 
+
+    public String info() {
+        return super.info() + 
+               ", Capacidad de carga: " + capacidad + " toneladas" + ", Número de ejes: " + noEjes + ", Tamaño de ruedas: " + tamanioRuedas + " pulgadas";
+    }
 }
