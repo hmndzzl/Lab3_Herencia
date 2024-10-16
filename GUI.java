@@ -1,3 +1,11 @@
+//
+// Programación orientada a objetos
+// Sección 20
+// Laboratorio #3 = Herencia
+// 
+// Hugo Méndez - 241265
+//
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
