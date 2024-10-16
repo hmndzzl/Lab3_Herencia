@@ -8,7 +8,7 @@ public class Main {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean salir = false;
+        boolean salir = false; // Control para el ciclo while del menú
 
         while (salir == false) {
             System.out.println("\nMenu:");
@@ -23,7 +23,7 @@ public class Main {
             int opcion = scanner.nextInt();
 
             switch (opcion) {
-                case 1:
+                case 1: // Agregar vehículo
                 System.out.println("\nSeleccione el tipo de vehículo:");
                 System.out.println("1. Auto");
                 System.out.println("2. Moto");
@@ -102,11 +102,11 @@ public class Main {
                         System.out.println("Camión agregado correctamente.");
                         break;
                     default:
-                        System.out.println("Tipo de vehículo no válido.");
+                        System.out.println("Tipo de vehículo no válido."); // Salida por si el usuario ingresa una opción inválida
                 }
                     break;
 
-                case 2:
+                case 2: // Listar vehículos por categoría
                 System.out.println("\nSeleccione la categoría a listar:");
                 System.out.println("1. Autos");
                 System.out.println("2. Motos");
@@ -114,7 +114,7 @@ public class Main {
                 int categoria = scanner.nextInt();
         
                 switch (categoria) {
-                    case 1:
+                    case 1: // Autos
                         System.out.println("\n--- Listado de Autos ---");
                         for (Vehiculo v : inventario) {
                             if (v instanceof Auto) {
@@ -122,7 +122,7 @@ public class Main {
                             }
                         }
                         break;
-                    case 2:
+                    case 2: // Motos
                         System.out.println("\n--- Listado de Motos ---");
                         for (Vehiculo v : inventario) {
                             if (v instanceof Moto) {
@@ -130,7 +130,7 @@ public class Main {
                             }
                         }
                         break;
-                    case 3:
+                    case 3: // Camiones
                         System.out.println("\n--- Listado de Camiones ---");
                         for (Vehiculo v : inventario) {
                             if (v instanceof Camion) {
@@ -143,41 +143,41 @@ public class Main {
                 }
                     break;
 
-                case 3:
+                case 3: // Buscar vehículo por placa
                 System.out.print("\nIngrese el número de placa a buscar: ");
                 int buscarPlaca = scanner.nextInt();
                 boolean encontrado = false;
 
                 for (Vehiculo v : inventario) {
-                    if (v.getPlaca() == buscarPlaca) {
+                    if (v.getPlaca() == buscarPlaca) { // Vehículo encontrado
                         System.out.println("Vehículo encontrado: " + v.info());
                         encontrado = true;
                     }
                 }
-                if (!encontrado) {
+                if (!encontrado) { // Vehículo no encontrado
                     System.out.println("Vehículo no encontrado.");
                 }
                     break; 
 
-                case 4:
+                case 4: // Eliminar vehículo
                 System.out.print("\nIngrese el número de placa del vehículo que quiere eliminar ");
                 int eliminar = scanner.nextInt();
                 boolean eliminado = false;
                 
                 for (Vehiculo v : inventario) {
-                    if (v.getPlaca() == eliminar) {
+                    if (v.getPlaca() == eliminar) { // Vehículo encontrado
                         inventario.remove(v);
                         System.out.println("Vehículo con placa " + eliminar + " eliminado.");
                         eliminado = true;
                         break;
                     }
                 }
-                if (eliminado == false) {
+                if (eliminado == false) { // Vehículo no encontrado
                     System.out.println("Vehículo no encontrado.");
                 }
                     break;
 
-                case 5:
+                case 5: // Mostar información del estado de los vehículos
                 int disponibles = 0, reservados = 0, vendidos = 0;
 
                 for (Vehiculo v : inventario) {
@@ -200,7 +200,7 @@ public class Main {
                 System.out.println("Vendidos: " + vendidos);
                     break;
 
-                case 6:
+                case 6: // Calcular monto total por estado de vehículo
                 double totalDisponibles = 0, totalReservados = 0, totalVendidos = 0;
 
                 for (Vehiculo v : inventario) {
@@ -222,18 +222,18 @@ public class Main {
                 System.out.println("Vendidos: Q" + totalVendidos);
                     break;
 
-                case 7:
+                case 7: // Salir
                     salir = true;
                     System.out.println("Terminando programa...");
                     break;
 
                 default:
-                    System.out.println("Error, por favor ingrese una opción válida.");
+                    System.out.println("Error, por favor ingrese una opción válida."); // Salida por si el usuario ingresa una opción inválida
             }
         }
         
-        scanner.close();
-        System.out.println("Programa Terminado");
+        scanner.close(); // Cerrar scanner
+        System.out.println("Programa Terminado"); // Confirmación que el programa terminó
     }
     
 }
